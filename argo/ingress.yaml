@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - my-spring-boot.example.com
+        - localhost:8088
       secretName: my-ssl-secret
   rules:
-    - host: my-spring-boot.example.com
+    - host: localhost:8088
       http:
         paths:
           - path: /
