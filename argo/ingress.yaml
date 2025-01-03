@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - localhost:8088
+        - localhost
       secretName: my-ssl-secret
   rules:
-    - host: localhost:8088
+    - host: localhost
       http:
         paths:
           - path: /
