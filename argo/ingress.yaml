@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: local-https-ingress
   annotations:
-    kubernetes.io/ingress.class: nginx
+    kubernetes.io/ingress.class: "nginx"
     # If you use cert-manager for automatic Let's Encrypt:
     # cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
