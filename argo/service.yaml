@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-boot-https-service
+  name: spring-boot-http-service
 spec:
   selector:
-    app: spring-boot-https
+    app: spring-boot-http
   ports:
     - protocol: TCP
       port: 80        # The port accessible inside the cluster
@@ -12,4 +12,3 @@ spec:
       # If you're using SSL inside the container, set targetPort to 8443 or 443
       # port: 443
       # targetPort: 8443
-  type: ClusterIP
