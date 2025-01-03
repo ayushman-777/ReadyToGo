@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-boot-https
+  labels:
+    app: spring-boot-https
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-boot-https
+  template:
+    metadata:
+      labels:
+        app: spring-boot-https
+    spec:
+      containers:
+        - name: spring-boot-https-container
+          image: ayushman777/rtg:latest
+          ports:
+            - containerPort: 8080
+          # If your Spring Boot is configured to run SSL within the app, you'd expose 8443 or 443
+          # ports:
+          #   - containerPort: 8443
+          #   name: https
